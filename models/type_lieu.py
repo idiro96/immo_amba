@@ -6,7 +6,7 @@ from odoo.exceptions import UserError
 
 class invistissementTypeLieu(models.Model):
     _name = 'invest.type.lieu'
-    _inherit = ['mail.thread', 'mail.activity.mixin', 'portal.mixin']
+    _inherit = 'mail.thread'
     _rec_name = 'code'
 
     code = fields.Char()
