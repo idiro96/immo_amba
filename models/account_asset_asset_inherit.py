@@ -105,7 +105,6 @@ class AccountAssetAssetInherited(models.Model):
         for rec in self:
             domain = []
             team_ids = []
-            print(rec.category_id.id)
             # print(self.dictonnaire_id.id)
             team_ids = self.env['invest.dictonnaire'].search([('category_id1.id', '=', rec.category_id.id)])
         if team_ids:
