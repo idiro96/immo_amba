@@ -19,7 +19,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'account', 'account_asset', 'mail', 'purchase', 'product','enterprise_theme'],
+    'depends': ['base', 'account', 'account_asset', 'mail', 'purchase', 'product'],
 
     # always loaded
     'data': [
@@ -33,9 +33,9 @@
         'data/sequence_proposition.xml',
         'data/sequence_attente.xml',
         'data/sequence_reintegration.xml',
+        'views/endroit_views.xml',
         'views/account_views.xml',
         'views/categorie_views.xml',
-        'views/endroit_views.xml',
         'views/maintenance_ligne_views.xml',
         'views/type_operation_views.xml',
         'views/type_lieu_views.xml',
@@ -62,7 +62,6 @@
         'wizards/sortie_invest_wizard.xml',
         'wizards/proposer_reforme_wizard.xml',
         'wizards/reintegration.xml',
-        'wizards/maintenance_asset_wizard_views.xml',
         'report/lieu_report.xml',
         'report/repertoire_des_investissements_report.xml',
         'report/asset_code_barre_report.xml',

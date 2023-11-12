@@ -105,6 +105,7 @@ class AccountAssetAssetInherited(models.Model):
         for rec in self:
             domain = []
             team_ids = []
+            print(rec.category_id.id)
             # print(self.dictonnaire_id.id)
             team_ids = self.env['invest.dictonnaire'].search([('category_id1.id', '=', rec.category_id.id)])
         if team_ids:
@@ -360,14 +361,7 @@ def générer_code_barre(asset):
     """Cette methode nous permis de creer un code à barre pour le bien
     immobilier qui stocké sur un champs de type byte"""
     ean = barcode.get('code128', asset.numero_inventaire, writer=ImageWriter())
-    ean.default_writer_options['text_distance'] = 2
-    ean.default_writer_options['font_size'] = 6
-    ean.default_writer_options['module_width'] = 0
-    ean.default_writer_options['center_text'] = False
-    # ean.default_writer_options['text_x'] = -10000
-
     buffer = io.BytesIO()
-
     ean.write(buffer)
     barcode_image = base64.b64encode(buffer.getvalue())
 
